@@ -3,6 +3,7 @@ import Frases from "./componente/Frases";
 import {Container, Button} from "react-bootstrap";
 import {useEffect, useState} from 'react';
 import Spinner from './componente/Spinner'
+import simpson from '../src/img/image.png'
 function App() {
  const [personaje, setPersonaje] = useState({});
  const [mostrarSpinner, setMostrarSpinner] = useState(true);
@@ -41,7 +42,7 @@ setMostrarSpinner(false);
   return (
     < >
     <Container className="my-5 text-center ">
-    <img src="https://trello.com/1/cards/6328e276517f8e0208590f76/attachments/632b8843a474c100700e1cfb/previews/632b8844a474c100700e1d03/download/image.png" alt="logo de los simpson" className="w-100" />
+    <img src={simpson} alt="logo Simpson" className="w-100" />
 <Button variant="warning" onClick={consultaAPI} >Obtener frases</Button>
     </Container>
     {mostrarComponente}
